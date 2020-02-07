@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		523786CA23E905E800C59FBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523786C923E905E800C59FBD /* AppDelegate.swift */; };
-		523786CC23E905E800C59FBD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523786CB23E905E800C59FBD /* SceneDelegate.swift */; };
 		523786CE23E905E800C59FBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523786CD23E905E800C59FBD /* ViewController.swift */; };
 		523786D123E905E800C59FBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 523786CF23E905E800C59FBD /* Main.storyboard */; };
 		523786D323E905EE00C59FBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 523786D223E905EE00C59FBD /* Assets.xcassets */; };
 		523786D623E905EE00C59FBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 523786D423E905EE00C59FBD /* LaunchScreen.storyboard */; };
+		523786DF23E9089700C59FBD /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523786DE23E9089700C59FBD /* Alarm.swift */; };
+		526720BF23EB721000DA4ACC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526720BE23EB720F00DA4ACC /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		523786C623E905E800C59FBD /* BikeAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BikeAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		523786C923E905E800C59FBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		523786CB23E905E800C59FBD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		523786CD23E905E800C59FBD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		523786D023E905E800C59FBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		523786D223E905EE00C59FBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		523786D523E905EE00C59FBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		523786D723E905EE00C59FBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		523786DE23E9089700C59FBD /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
+		526720BE23EB720F00DA4ACC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,24 @@
 		523786C823E905E800C59FBD /* BikeAlarm */ = {
 			isa = PBXGroup;
 			children = (
-				523786C923E905E800C59FBD /* AppDelegate.swift */,
-				523786CB23E905E800C59FBD /* SceneDelegate.swift */,
+				523786DD23E9061700C59FBD /* SupportingFiles */,
 				523786CD23E905E800C59FBD /* ViewController.swift */,
+				523786DE23E9089700C59FBD /* Alarm.swift */,
 				523786CF23E905E800C59FBD /* Main.storyboard */,
 				523786D223E905EE00C59FBD /* Assets.xcassets */,
-				523786D423E905EE00C59FBD /* LaunchScreen.storyboard */,
 				523786D723E905EE00C59FBD /* Info.plist */,
 			);
 			path = BikeAlarm;
+			sourceTree = "<group>";
+		};
+		523786DD23E9061700C59FBD /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				523786C923E905E800C59FBD /* AppDelegate.swift */,
+				526720BE23EB720F00DA4ACC /* SceneDelegate.swift */,
+				523786D423E905EE00C59FBD /* LaunchScreen.storyboard */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +151,8 @@
 			files = (
 				523786CE23E905E800C59FBD /* ViewController.swift in Sources */,
 				523786CA23E905E800C59FBD /* AppDelegate.swift in Sources */,
-				523786CC23E905E800C59FBD /* SceneDelegate.swift in Sources */,
+				523786DF23E9089700C59FBD /* Alarm.swift in Sources */,
+				526720BF23EB721000DA4ACC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +299,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 895EQWU522;
 				INFOPLIST_FILE = BikeAlarm/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -294,7 +307,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "jtlemkin-ucdavis.edu.BikeAlarm";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -305,6 +318,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 895EQWU522;
 				INFOPLIST_FILE = BikeAlarm/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +326,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "jtlemkin-ucdavis.edu.BikeAlarm";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

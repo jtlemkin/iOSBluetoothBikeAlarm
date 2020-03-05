@@ -15,37 +15,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bike in Range" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBb-6E-yVR">
-                                <rect key="frame" x="102" y="391" width="210" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bike in Range" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBb-6E-yVR">
+                                <rect key="frame" x="20" y="391" width="374" height="45"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbd-a9-jbT">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbd-a9-jbT">
                                 <rect key="frame" x="82" y="537" width="250" height="250"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hbd-a9-jbT" secondAttribute="height" multiplier="1:1" id="QgE-7E-9g3"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="40"/>
                                 <state key="normal" title="Arm">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="125"/>
+                                        <integer key="value" value="110"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="ToggleAlarm:" destination="BYZ-38-t0r" eventType="touchUpInside" id="57W-yE-ZWW"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="red_bike" translatesAutoresizingMaskIntoConstraints="NO" id="mUx-Cv-aoh">
-                                <rect key="frame" x="-182" y="92" width="779" height="344"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red_bike" translatesAutoresizingMaskIntoConstraints="NO" id="mUx-Cv-aoh">
+                                <rect key="frame" x="-182.5" y="104" width="779" height="270"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="779" id="P5n-z5-Kox"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hbd-a9-jbT" secondAttribute="bottom" constant="75" id="1jt-hM-kMN"/>
+                            <constraint firstItem="fBb-6E-yVR" firstAttribute="centerX" secondItem="mUx-Cv-aoh" secondAttribute="centerX" id="3Fw-VB-p3d"/>
+                            <constraint firstItem="mUx-Cv-aoh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="7Un-Ik-RCD"/>
+                            <constraint firstItem="fBb-6E-yVR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="391" id="A7u-uj-DTn"/>
+                            <constraint firstItem="hbd-a9-jbT" firstAttribute="top" secondItem="mUx-Cv-aoh" secondAttribute="bottom" constant="64" id="H6Q-WU-Vau"/>
+                            <constraint firstItem="fBb-6E-yVR" firstAttribute="firstBaseline" secondItem="mUx-Cv-aoh" secondAttribute="baseline" constant="52.5" symbolType="layoutAnchor" id="LLu-lP-e5w"/>
+                            <constraint firstItem="fBb-6E-yVR" firstAttribute="top" secondItem="mUx-Cv-aoh" secondAttribute="bottom" constant="-82" id="MWJ-P1-7hF"/>
+                            <constraint firstItem="hbd-a9-jbT" firstAttribute="top" relation="greaterThanOrEqual" secondItem="fBb-6E-yVR" secondAttribute="bottom" constant="50" id="NTQ-VW-M21"/>
+                            <constraint firstItem="fBb-6E-yVR" firstAttribute="centerX" secondItem="hbd-a9-jbT" secondAttribute="centerX" id="RJI-G8-8mj"/>
+                            <constraint firstItem="hbd-a9-jbT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="82" id="bm3-Hs-Zqe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hbd-a9-jbT" secondAttribute="trailing" constant="82" id="ir1-Ur-N9E"/>
+                            <constraint firstItem="fBb-6E-yVR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="r6o-Fj-Po1"/>
+                            <constraint firstItem="fBb-6E-yVR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="sOJ-Kg-Mfr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="MWJ-P1-7hF"/>
+                                <exclude reference="RJI-G8-8mj"/>
+                                <exclude reference="H6Q-WU-Vau"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="BikeAlarm" id="VPG-CS-2et"/>
                     <connections>

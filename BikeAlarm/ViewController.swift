@@ -39,9 +39,7 @@ class ViewController: UIViewController {
         updateView()
     }
 
-    @IBAction func ToggleAlarm(_ sender: Any) {
-        print("HEY")
-        
+    @IBAction func ToggleAlarm(_ sender: Any) {        
         let char = armedCharacteristic!
         
         if char.properties.contains(.write) && alarmPeripheral != nil {

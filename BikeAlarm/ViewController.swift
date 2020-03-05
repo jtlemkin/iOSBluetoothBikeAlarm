@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         }
     }
     
-    var bikeInRange = true {
+    var bikeInRange = false {
         didSet {
             updateView()
         }

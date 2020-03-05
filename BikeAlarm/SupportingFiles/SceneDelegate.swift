@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  BikeAlarm
+//  Landmarks
 //
-//  Created by James Lemkin on 2/3/20.
+//  Created by James Lemkin on 2/4/20.
 //  Copyright © 2020 James Lemkin. All rights reserved.
 //
 
@@ -50,4 +50,3 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
 }
-
